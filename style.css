@@ -1,10 +1,124 @@
-body {
-    font-family: SimSun;
-    text-align: left;
-    background-color: bisque;
+* {
+    box-sizing: border-box;
 }
 
-h1 {
-    color: darkblue;
-    text-align: center;
+html {
+    scroll-behavior: smooth;
 }
+
+body {
+    margin: 0;
+    padding: 0 40px;
+    font-family: Arial, "Noto Sans TC", sans-serif;
+    color: #333;
+    background-color: #faf0e0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #faf0e0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: dimgray;
+    color: #333333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.nav-links a:hover {
+    color: #788b72
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 10px 40px;
+    scroll-margin-top: 90px;
+}
+
+.hero {
+    min-height: 200px;
+    background-color: #e8ede7;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 12px;
+}
+
+.faith-list {
+    padding-left: 30px;
+    line-height: 1.8;
+}
+
+.faith-list li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* 手幾版 */
+@media (max-width: 768px) {
+    body {
+        padding: 0 16px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    section {
+        padding: 10px 16px;
+        scroll-margin-top: 150px;
+    }
+}
+
+/* 尊重使用者的減少動畫偏好 */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
